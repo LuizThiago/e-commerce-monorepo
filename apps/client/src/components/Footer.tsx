@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="mt-16 flex flex-col items-center gap-8 md:flex-row md:items-start md:justify-between md:gap-0 bg-gray-800 p-8 rounded-lg">
+    <div className="mt-16 flex w-full flex-col items-center gap-8 rounded-lg bg-gray-800 p-8 md:flex-row md:items-start md:justify-between md:gap-0">
       <div className="flex flex-col items-center md:items-start gap-4">
         <Link href="/" className="flex items-center">
           <Image src="/logo.png" alt="TrendLama" width={36} height={36} />
