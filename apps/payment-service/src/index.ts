@@ -1,8 +1,12 @@
+import { clerkMiddleware, getAuth } from "@hono/clerk-auth";
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import { uptime } from "process";
+import { shouldBeUser } from "./middleware/authMiddleware.js";
 
 const app = new Hono();
+
+app.use("*", clerkMiddleware());
 
 app.get("/health", (c) => {
   return c.json({
@@ -10,6 +14,13 @@ app.get("/health", (c) => {
     status: "ok",
     uptime: uptime(),
     timestamp: Date.now(),
+  });
+});
+
+app.get("/test", shouldBeUser, (c) => {
+  return c.json({
+    message: "Payment service is operational",
+    userId: c.get("userId"),
   });
 });
 

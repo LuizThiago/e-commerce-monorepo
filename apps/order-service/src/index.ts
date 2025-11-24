@@ -1,6 +1,10 @@
 import Fastify from "fastify";
+import { clerkPlugin, getAuth } from "@clerk/fastify";
+import { shouldBeUser } from "./middleware/authMiddleware.js";
 
 const app = Fastify({ logger: false });
+
+app.register(clerkPlugin);
 
 app.get("/health", async (request, reply) => {
   return reply.send({
@@ -9,6 +13,12 @@ app.get("/health", async (request, reply) => {
     timestamp: Date.now(),
     uptime: process.uptime(),
   });
+});
+
+app.get("/test", { preHandler: shouldBeUser }, (req, res) => {
+  return res
+    .status(200)
+    .send({ message: "Order service authenticated", userId: req.userId });
 });
 
 const start = async () => {

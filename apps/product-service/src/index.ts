@@ -1,5 +1,7 @@
 import express from "express";
 import cors from "cors";
+import { clerkMiddleware, getAuth } from "@clerk/express";
+import { shouldBeUser } from "./middleware/authmiddleware.js";
 
 const app = express();
 app.use(
@@ -9,6 +11,8 @@ app.use(
   })
 );
 
+app.use(clerkMiddleware());
+
 app.get("/health", (req, res) => {
   res.send({
     service: "product-service",
@@ -16,6 +20,10 @@ app.get("/health", (req, res) => {
     timestamp: Date.now(),
     uptime: process.uptime(),
   });
+});
+
+app.get("/test", shouldBeUser, (req, res) => {
+  res.json({ message: "Product service authenticated", userId: req.userId });
 });
 
 app.listen(8000, () => {
