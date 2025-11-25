@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import { clerkMiddleware, getAuth } from "@clerk/express";
 import { shouldBeUser } from "./middleware/authmiddleware.js";
+import productRouter from "./routes/product.route.js";
+import categoryRouter from "./routes/category.route.js";
 
 const app = express();
 app.use(
@@ -21,6 +23,9 @@ app.get("/health", (req, res) => {
     uptime: process.uptime(),
   });
 });
+
+app.use("/products", productRouter);
+app.use("/categories", categoryRouter);
 
 app.get("/test", shouldBeUser, (req, res) => {
   res.json({ message: "Product service authenticated", userId: req.userId });

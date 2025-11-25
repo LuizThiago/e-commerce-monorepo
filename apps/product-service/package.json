@@ -19,6 +19,7 @@
   "dependencies": {
     "@clerk/express": "^1.7.52",
     "cors": "^2.8.5",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "@repo/product-db": "*"
   }
 }
