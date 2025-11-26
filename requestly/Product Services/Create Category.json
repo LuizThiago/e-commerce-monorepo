@@ -1,0 +1,26 @@
+{
+  "name": "Create Category",
+  "request": {
+    "type": "http",
+    "url": "{{PRODUCT_SERVICES_URL}}/categories",
+    "scripts": {
+      "preRequest": "",
+      "postResponse": ""
+    },
+    "method": "POST",
+    "queryParams": [],
+    "headers": [],
+    "body": "{\n  \"name\":\"T-shirts\",\n  \"slug\":\"t-shirts\"\n}",
+    "bodyContainer": {
+      "text": "{\n  \"name\":\"T-shirts\",\n  \"slug\":\"t-shirts\"\n}",
+      "form": [],
+      "multipartForm": []
+    },
+    "contentType": "application/json",
+    "auth": {
+      "currentAuthType": "INHERIT",
+      "authConfigStore": {}
+    },
+    "pathVariables": []
+  }
+}

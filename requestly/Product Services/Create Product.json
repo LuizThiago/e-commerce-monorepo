@@ -1,0 +1,26 @@
+{
+  "name": "Create Product",
+  "request": {
+    "type": "http",
+    "url": "{{PRODUCT_SERVICES_URL}}/products",
+    "scripts": {
+      "preRequest": "",
+      "postResponse": ""
+    },
+    "method": "POST",
+    "queryParams": [],
+    "headers": [],
+    "body": "{\n  \"name\": \"Adidas CoreFit T-Shirt\",\n  \"shortDescription\": \"Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.\",\n  \"description\": \"Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.\",\n  \"price\": 39.9,\n  \"sizes\": [\"s\", \"m\", \"l\", \"xl\", \"xxl\"],\n  \"colors\": [\"gray\", \"purple\", \"green\"],\n  \"images\": {\n    \"gray\": \"/products/1g.png\",\n    \"purple\": \"/products/1p.png\",\n    \"green\": \"/products/1gr.png\"\n  },\n  \"categorySlug\": \"t-shirts\"\n}",
+    "bodyContainer": {
+      "text": "{\n  \"name\": \"Adidas CoreFit T-Shirt\",\n  \"shortDescription\": \"Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.\",\n  \"description\": \"Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.\",\n  \"price\": 39.9,\n  \"sizes\": [\"s\", \"m\", \"l\", \"xl\", \"xxl\"],\n  \"colors\": [\"gray\", \"purple\", \"green\"],\n  \"images\": {\n    \"gray\": \"/products/1g.png\",\n    \"purple\": \"/products/1p.png\",\n    \"green\": \"/products/1gr.png\"\n  },\n  \"categorySlug\": \"t-shirts\"\n}",
+      "form": [],
+      "multipartForm": []
+    },
+    "contentType": "application/json",
+    "auth": {
+      "currentAuthType": "INHERIT",
+      "authConfigStore": {}
+    },
+    "pathVariables": []
+  }
+}

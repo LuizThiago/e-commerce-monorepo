@@ -1,8 +1,8 @@
 {
-  "name": "Router test",
+  "name": "Get All Products",
   "request": {
     "type": "http",
-    "url": "{{PRODUCT_SERVICES_URL}}/products/test",
+    "url": "{{PRODUCT_SERVICES_URL}}/products",
     "scripts": {
       "preRequest": "",
       "postResponse": ""
