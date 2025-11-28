@@ -1,5 +1,6 @@
 import { getAuth } from "@hono/clerk-auth";
 import { createMiddleware } from "hono/factory";
+import { CustomJwtSessionClaims } from "@repo/types";
 
 export const shouldBeUser = createMiddleware<{
   Variables: {
@@ -12,6 +13,12 @@ export const shouldBeUser = createMiddleware<{
   }
 
   c.set("userId", auth.userId);
+
+  const claims = auth.sessionClaims as CustomJwtSessionClaims;
+
+  if (claims.metadata?.role !== "admin") {
+    return c.json({ error: "Forbidden - Admins only" }, 403);
+  }
 
   await next();
 });

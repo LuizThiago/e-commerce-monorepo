@@ -2,7 +2,7 @@
   "name": "Get All Orders",
   "request": {
     "type": "http",
-    "url": "https://app.requestly.io/echo",
+    "url": "{{PRODUCT_SERVICES_URL}}/orders",
     "scripts": {
       "preRequest": "",
       "postResponse": ""
@@ -15,6 +15,7 @@
     "auth": {
       "currentAuthType": "INHERIT",
       "authConfigStore": {}
-    }
+    },
+    "pathVariables": []
   }
 }

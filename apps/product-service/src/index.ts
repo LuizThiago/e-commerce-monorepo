@@ -3,6 +3,7 @@ import cors from "cors";
 import { clerkMiddleware } from "@clerk/express";
 import productRouter from "./routes/product.route";
 import categoryRouter from "./routes/category.route";
+import { shouldBeUser } from "./middleware/authmiddleware";
 
 const app = express();
 app.use(express.json()); // Middleware to parse JSON bodies
@@ -13,6 +14,14 @@ app.use(
   })
 );
 app.use(clerkMiddleware());
+
+app.get("/test", shouldBeUser, (req: Request, res: Response) => {
+  return res.status(200).json({
+    message: "Product service is operational!",
+    userId: req.userId,
+    bearerToken: req.headers.authorization,
+  });
+});
 
 app.use("/products", productRouter);
 app.use("/categories", categoryRouter);
