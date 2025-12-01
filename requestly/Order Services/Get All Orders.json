@@ -13,8 +13,12 @@
     "body": null,
     "contentType": "text/plain",
     "auth": {
-      "currentAuthType": "INHERIT",
-      "authConfigStore": {}
+      "currentAuthType": "BEARER_TOKEN",
+      "authConfigStore": {
+        "BEARER_TOKEN": {
+          "bearer": "eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDExMUFBQSIsImtpZCI6Imluc18zNW45bG9hREVjREROWFgzU2VycWI0MTRtRHAiLCJ0eXAiOiJKV1QifQ.eyJhenAiOiJodHRwOi8vbG9jYWxob3N0OjMwMDIiLCJleHAiOjE3NjQzNTQxNDcsImZ2YSI6WzYwNjgsLTFdLCJpYXQiOjE3NjQzNTQwODcsImlzcyI6Imh0dHBzOi8vdHJ1ZS1xdWFpbC01Mi5jbGVyay5hY2NvdW50cy5kZXYiLCJqdGkiOiIyZjRhYTcwMTIxNzQ2NzhmNzAzOSIsIm1ldGFkYXRhIjp7InJvbGUiOiJhZG1pbiJ9LCJuYmYiOjE3NjQzNTQwNzcsInNpZCI6InNlc3NfMzV2VUlvZU9sVXQ0aE9CS3NVZnQzblJneFAwIiwic3RzIjoiYWN0aXZlIiwic3ViIjoidXNlcl8zNW5HMXdITkJoUHFZSVdoR3J5TVJpdDE1dzgiLCJ2IjoyfQ.B2kEaB8YqnTvS-Rs1WLTpuqGR23m4D7VBJR0-yabSF5oPuo5ZY0QjBuhYRdfx9yf1JqunYZfqK8sMydcNUoAQaJttfyBs6xdUvk3i55jE_rvv3QmPksZfY2maQ89dzLkduLizlpdSJzpLsKrCFcnHkG0o0PWRwDSfmo58bb8iUAfODOIaYlQ3OPC8mTx5A6GMmqsuHL-ZbYLVJMxVsoLgKQaCHAlxVQYPLyKXoexrMQGkrYt2CXtYNTfxmwYQs-MSXilZ2jRvfY9DUQcP7WvZBBDFgsivAbx4AJCgR3OFS_iq9ExNjdFt1TCbafux6kC049gr7HTS4OGBHHfKZ_X1w"
+        }
+      }
     },
     "pathVariables": []
   }
