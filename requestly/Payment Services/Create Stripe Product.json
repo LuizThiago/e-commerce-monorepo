@@ -1,0 +1,21 @@
+{
+  "name": "Create Stripe Product",
+  "request": {
+    "type": "http",
+    "url": "{{PAYMENT_SERVICES_URL}}/create-stripe-product",
+    "scripts": {
+      "preRequest": "",
+      "postResponse": ""
+    },
+    "method": "POST",
+    "queryParams": [],
+    "headers": [],
+    "body": null,
+    "contentType": "text/plain",
+    "auth": {
+      "currentAuthType": "INHERIT",
+      "authConfigStore": {}
+    },
+    "pathVariables": []
+  }
+}

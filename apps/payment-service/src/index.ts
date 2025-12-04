@@ -16,26 +16,26 @@ app.get("/health", (c) => {
   });
 });
 
-app.post("/create-stripe-product", async (c) => {
-  const res = await stripe.products.create({
-    id: "123",
-    name: "Sample Product",
-    default_price_data: {
-      currency: "usd",
-      unit_amount: 2000,
-    },
-  });
+// app.post("/create-stripe-product", async (c) => {
+//   const res = await stripe.products.create({
+//     id: "123",
+//     name: "Sample Product",
+//     default_price_data: {
+//       currency: "usd",
+//       unit_amount: 2000,
+//     },
+//   });
 
-  return c.json(res);
-});
+//   return c.json(res);
+// });
 
-app.get("/stripe-product-price", async (c) => {
-  const res = await stripe.prices.list({
-    product: "123",
-  });
+// app.get("/stripe-product-price", async (c) => {
+//   const res = await stripe.prices.list({
+//     product: "123",
+//   });
 
-  return c.json(res);
-});
+//   return c.json(res);
+// });
 
 const start = async () => {
   try {
